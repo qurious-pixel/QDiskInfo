@@ -34,7 +34,7 @@ jobs:
       if: ${{ matrix.clib == 'glibc' }}
     - name: Install dependencies for musl
       run: |
-        apk add git cmake make gcc g++ curl gcompat qt6-qtbase-dev qt6-qtbase-x11 qt6-qtsvg breeze smartmontools
+        apk add git cmake make gcc g++ curl gcompat qt6-qtbase-dev qt6-qtbase-x11 qt6-qtsvg breeze smartmontools xcb-util-cursor-dev
         git config --global --add safe.directory '*'
       if: ${{ matrix.clib == 'musl' }}
       
