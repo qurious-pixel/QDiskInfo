@@ -3,7 +3,6 @@ name: Build
 on:
   push:
     branches:
-    - main
     paths-ignore:
     - '**.md'
   pull_request:
@@ -14,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false       
       matrix:
-        clib: [glibc, musl]
+        clib: [musl]
         include:
           - clib: glibc
             os: ubuntu-24.04
